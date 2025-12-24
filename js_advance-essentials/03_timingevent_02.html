@@ -1,0 +1,37 @@
+
+<!-- // Task 2: Create a digital clock that updates every second using setInterval(). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Digital Clock</title>
+  <style>
+    #clock {
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="clock">00:00:00</div>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const time = now.toLocaleTimeString();
+      document.getElementById("clock").textContent = time;
+    }
+
+    // Update the clock every second
+    setInterval(updateClock, 1000);
+
+    // Display time immediately
+    updateClock();
+  </script>
+
+</body>
+</html>
